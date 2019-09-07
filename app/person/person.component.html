@@ -1,0 +1,47 @@
+<div class="modal-header">
+	<h4 class="modal-title">Nuevo Registro</h4>
+	<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+</div>
+<div class="modal-body">
+  <div id="error" class="invalid"></div>
+  <div id="msg" class="success"></div>
+	<div class="card lesson-border">
+	
+		<div class="card-body">
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+  <div class="form-group">
+    <label>Fecha</label>
+    <input name="fecha" type="date" class="form-control" placeholder="Ingrese Fecha" ngModel>
+ 
+  </div>
+  <div class="form-group">
+    <label for="texto">Texto</label>
+    <input type="text" class="form-control" name="texto" placeholder="Texto" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="texto">Numero</label>
+    <input  type="number" class="form-control" name="numero" placeholder="Numero" ngModel>
+  </div>
+  <div class="form-group">
+  <select class="form-control" (change)="onChange($event.target.value)">
+    <option value="" disabled selected> Selecciona un Departamento</option>
+   <option [value]="country.nombre" *ngFor="let country of departamentos">  {{country.nombre}}</option>
+ </select>
+</div>
+<div class="form-group">
+  <select  class="form-control">
+    <option value="" disabled selected> Selecciona una Ciudad</option>
+   <option [value]="ciudad" *ngFor="let ciudad of ciudad">  {{ciudad}}</option>
+ </select>
+</div>
+  <input type = "submit" value = "Enviar">
+  
+</form>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	
+</div>

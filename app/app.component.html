@@ -1,0 +1,21 @@
+<div class="container-fluid" *ngIf="persons">
+	<div class="row">
+		<div class="col-12 col-sm-6 col-md-4 col-lg-3 lesson-card" *ngFor="let person of persons">
+			<div class="card lesson-border">
+				<img class="card-img-top" src="{{person.image_profile}}" alt="Card image cap">
+				<div class="card-body">
+					<p class="card-text"><b>Week: </b>{{person.id}}</p>
+					<p class="card-text"><b>Date: </b>{{person.name}}</p>
+					<h5 class="card-title"><b>Title: </b>{{person.lastname}}</h5>
+					<p class="card-text"><b>Description: </b>{{person.age}}</p>
+				</div>
+  
+				</div>
+        
+			</div>
+ 
+		</div>
+   
+<button type="button" class="btn btn-primary" aria-label="Close" (click)="crearRegistro()"> Funcionalidad  Parcial WWW</button>
+	</div>
+ 
